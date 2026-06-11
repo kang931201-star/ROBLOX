@@ -357,7 +357,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .sb-stp:last-child{border-right:none;}
 @media (max-width:760px){ .sb-stp{border-right:none; border-bottom:1px solid var(--line);} .sb-stp:last-child{border-bottom:none;} }
 .sb-stp .n{font-family:var(--ff-latin); font-weight:900; font-size:34px; color:transparent; -webkit-text-stroke:1.4px var(--orange); margin-bottom:14px;}
-.sb-stp p{margin:0; font-size:15px; font-weight:700; line-height:1.55; min-height:4.7em;}
+.sb-stp p{white-space:pre-line; margin:0; font-size:15px; font-weight:700; line-height:1.55; min-height:4.7em;}
 .sb-stpimg{aspect-ratio:16/10; width:100%; margin-top:14px; border-radius:12px; overflow:hidden; border:1px solid var(--line); background:#0a0f1e; padding:12px;}
 .sb-stpimg img{width:100%; height:100%; object-fit:contain;}
 .sb-stepnote{color:var(--muted-2); font-size:12.5px; margin-top:18px;}
@@ -374,7 +374,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .sb-bic{width:62px; height:62px; margin-bottom:18px;}
 .sb-bic img{width:100%; height:100%; object-fit:contain; filter:drop-shadow(0 6px 12px rgba(0,0,0,.4));}
 .sb-bcard h4{margin:0 0 10px; font-size:18px; font-weight:800;}
-.sb-bcard p{margin:0; color:var(--muted); font-size:14px; line-height:1.6;}
+.sb-bcard p{margin:0; color:var(--muted); font-size:14px; line-height:1.6; white-space:pre-line;}
 .sb-bigbanner{margin-top:34px; padding:clamp(26px,4vw,46px); border-radius:24px; text-align:center;
   background:linear-gradient(120deg,rgba(255,138,30,.16),rgba(46,134,255,.16)); border:1px solid var(--line-2);}
 .sb-bigbanner p{margin:0 auto; max-width:46em; font-size:clamp(16px,1.8vw,22px); font-weight:700; line-height:1.55; padding-top:20px;}
@@ -889,9 +889,9 @@ window.EVENT = {
       title: "이벤트 참여방법",
       stepImgs: ["assets/step-01.png", "assets/step-02.jpg", "assets/step-03.jpg"],
       steps: [
-        "피카 PC방에서 피카플레이 회원으로 좌석 로그인",
-        "로부스트 런처 실행하고, 오버킬 1시간 이상 플레이하기",
-        "피카플레이 APP 또는 크래프트박스 마이페이지에서 지급된 마일리지 확인하기",
+        "피카 PC방에서\n피카플레이 회원으로 좌석 로그인",
+        "로부스트 런처 실행하고,\n오버킬 1시간 이상 플레이하기",
+        "피카플레이 APP 또는 크래프트박스\n마이페이지에서 지급된 마일리지 확인하기",
       ],
       note: "※ 오버킬 외 런처 내 등록된 게임 3종(99 야간 숲, 브레인 롯 훔치기, 댄디스 월드) 플레이 시에도 참여 가능합니다.",
     },
@@ -900,10 +900,10 @@ window.EVENT = {
     title: "오버킬 PC방 혜택 안내",
     lead: "오버킬 출시 기념, PC방 전용 혜택 놓치지 마세요!",
     cards: [
-      { t: "7일 출석 보상", d: "7일 출석에 도전하고 스페셜한 보상을 받아가세요!", icon: "calendar", img: "assets/bic-01.png" },
-      { t: "접속 보상", d: "PC방에서 접속만 해도 매일 보상을 드려요!", icon: "bolt", img: "assets/bic-02.png" },
-      { t: "PC방 전용 인게임 코드", d: "PC방에서만 지급되는 한정판 인게임 코드를 획득하세요!", icon: "code", img: "assets/bic-03.png" },
-      { t: "PC방 무료 스킨", d: "오직 PC방에서만! 무료로 스킨을 이용하세요!", icon: "skin", img: "assets/bic-04.png" },
+      { t: "7일 출석 보상", d: "7일 출석에 도전하고\n스페셜한 보상을 받아가세요!", icon: "calendar", img: "assets/bic-01.png" },
+      { t: "접속 보상", d: "PC방에서 접속만 해도\n매일 보상을 드려요!", icon: "bolt", img: "assets/bic-02.png" },
+      { t: "PC방 전용 인게임 코드", d: "PC방에서만 지급되는\n한정판 인게임 코드를 획득하세요!", icon: "code", img: "assets/bic-03.png" },
+      { t: "PC방 무료 스킨", d: "오직 PC방에서만!\n무료로 스킨을 이용하세요!", icon: "skin", img: "assets/bic-04.png" },
     ],
     cta: "지금 바로 무료 플레이",
   },
