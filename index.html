@@ -962,7 +962,7 @@ window.EVENT = {
       { name: "", nameImg: "assets/03_game.png", en: "더 빠른 성장!", img: "assets/ip-brainrot.webp", tag: "수집 경쟁", fit: "contain", link: "https://www.roboost.gg/posts/benefits/steal-a-brainrot",
         benefitLine: { text: "게임 머니 ", em: "x2" } },
       { name: "", nameImg: "assets/04_game.png", en: "친구와 함께 더 재밌게!", img: "assets/icontest2.png", tag: "PC방 혜택", fit: "cover",
-        benefitLine: { text: "토큰+경험치 부스트 ", em: "+20%" } },
+        benefitLine: { text: "토큰+경험치 부스트 ", em: "+20%" }, note: "* 6월 27일(토)부터 플레이 혜택 적용" },
     ],
   },
   terms: {
@@ -1194,6 +1194,9 @@ function SuanB({ D, pcOn, setPcOn }) {
             {D.hero.days.map((d, i) => <span className="sb-chip" key={i}><b>{d.range}</b><small>{d.label}</small></span>)}
             <span className="sb-chip green"><b>✅ 선착순</b><small>{D.hero.daysTag}</small></span>
           </span>
+          <div style={{ marginTop: '8px', fontSize: '13px', color: '#ff3b3b', fontWeight: '700', letterSpacing: '0.01em' }}>
+            *오버킬: 6월 28일(일)부터 플레이 혜택 적용
+          </div>
           {!pcOn &&
           <div className="sb-offbar">현재 <b style={{ color: '#fff' }}>미가맹(혜택 OFF)</b> · 가맹 PC방에서 로부스트를 켜면 혜택이 자동 적용됩니다
               <button className="btn btn--md btn--fire" style={{ padding: '7px 14px', fontSize: 12 }} onClick={() => setPcOn(true)}>혜택 ON</button>
@@ -1242,6 +1245,11 @@ function SuanB({ D, pcOn, setPcOn }) {
               <p className="sb-rwd-sub">1일 1회 일 별 선착순, 매일 참여 가능</p>
               <p className="note">{D.play.leadNote}</p>
               <p className="note" style={{ marginTop: 6 }}>{D.play.reward.note}</p>
+              <div style={{ marginTop: '10px', fontSize: '12px', color: '#ff3b3b', fontWeight: '700', lineHeight: '1.7' }}>
+                <p style={{ margin: '0' }}>* 99나이트 인 더 포레스트, 댄디스 월드, 브레인롯 훔치기: 6월 26일(금)부터 플레이 혜택 적용</p>
+                <p style={{ margin: '0' }}>* 이베이드: 6월 27일(토)부터 플레이 혜택 적용</p>
+                <p style={{ margin: '0' }}>* 오버킬: 6월 28일(일)부터 플레이 혜택 적용</p>
+              </div>
             </div>
             <div className="sb-rewardimg"><img src={D.play.reward.img} alt="이벤트 보상 마일리지" /></div>
           </div>
@@ -1369,7 +1377,8 @@ function SuanB({ D, pcOn, setPcOn }) {
           {/* 로부스트로 더 플레이 (IP 4종) */}
           <div className="sb-ip" style={{ marginTop: 30 }}>
           {D.ip.items.map((g, i) =>
-              <a className={`sb-ipcard reveal ${i % 2 ? 'r' : ''}`} key={i} href={g.link || D.links.roboost} target="_blank" rel="noopener">
+              <div key={i}>
+              <a className={`sb-ipcard reveal ${i % 2 ? 'r' : ''}`} href={g.link || D.links.roboost} target="_blank" rel="noopener">
               <div className={`sb-ipcard__media ${g.fit === 'contain' ? 'contain' : ''}`}><img className={g.fit} src={g.img} alt={g.name} /></div>
               <div className="sb-ipcard__veil" />
               {g.nameImg ? <img src={g.nameImg} alt="" style={{ position:"relative", zIndex:2, width:"auto", maxWidth:"70%", height:"clamp(28px,4vw,48px)", objectFit:"contain", margin:"22px 0 0 22px" }} /> : g.name ? <h3 className="sb-ipcard__name">{g.name}</h3> : null}
@@ -1387,6 +1396,8 @@ function SuanB({ D, pcOn, setPcOn }) {
                 <div className="sb-ipcard__en">{g.en}</div>
               </div>
             </a>
+              {g.note && <p style={{ margin: '8px 0 4px', fontSize: '12px', color: '#ff3b3b', fontWeight: '700', lineHeight: '1.5' }}>{g.note}</p>}
+              </div>
               )}
           </div>
 
